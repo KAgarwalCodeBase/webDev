@@ -1,0 +1,33 @@
+html{
+    font-size: 16px;
+}
+.per-section{
+    width: 100px;
+    height: 100px;
+    background: teal;
+}
+
+.per-div{
+    width: 25%;
+    height: 25%;
+    background-color: pink;
+}
+
+.em-span{
+    font-size: 10px;
+}
+
+.em-i{
+    font-size: 2em;
+}
+.em-example{
+    background-color: rgb(194, 206, 218);
+}
+.rem-example{
+    background-color: rgb(255, 195, 127);
+}
+.vw-div{
+    width: 50vw;
+    height:50px;
+    background-color: brown;
+}
