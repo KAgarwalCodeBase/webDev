@@ -238,13 +238,13 @@ This properties work on main axis.
 `justify-content: center;`  
 
 This properties work on cross axis.  
-`flex-wrap: wrap`
+`flex-wrap: wrap`  
 `align-content: space-between;` [align-content works with flex-wrap not a standalone.]
 
 This properties work on single items.  
 `order: 1;`  
-`align-self: center;`
+`align-self: center;`  
 `flex-grow: 1;` [default 0]  
-`flex-basis: 10px;`
+`flex-basis: 10px;`  
 `flex-shrink:4;`
 
