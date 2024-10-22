@@ -288,7 +288,7 @@ for practicing flex box: [flexfroggy](https://flexboxfroggy.com/)
 
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.  
 
-`Difference between grid and flex box.`
+`Difference between grid and flex box.`  
 <image src="../assets/css-grid1.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
 <br/><br/>
 `Grid Line`  
