@@ -226,3 +226,25 @@ Fixed: The element is positioned relative to the browser window
 
 
 ![CSS Position Values](../assets/css-position-values.png)
+
+
+## Flex
+
+`display: flex`  
+
+This properties work on main axis.  
+`flex-direction: column` [default: row]  
+`flex-wrap: wrap`  
+`justify-content: center;`  
+
+This properties work on cross axis.  
+`flex-wrap: wrap`
+`align-content: space-between;` [align-content works with flex-wrap not a standalone.]
+
+This properties work on single items.  
+`order: 1;`  
+`align-self: center;`
+`flex-grow: 1;` [default 0]  
+`flex-basis: 10px;`
+`flex-shrink:4;`
+
