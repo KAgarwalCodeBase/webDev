@@ -177,7 +177,7 @@ div{
 
 Inheritance is when we declare something on an element, and it also applies that element's decendant.
 
-CSS inheritance is only applied to typograph related properties to its child and not for layout related properties.  
+CSS inheritance is only applied to typography related properties to its child and not for layout related properties.  
 
 `index.html`
 ```
@@ -282,3 +282,23 @@ Try using flex-flow to repeat the previous level.
 This can be confusing, but `align-content` determines the spacing between lines, while `align-items` determines how the items as a whole are aligned within the container. When there is only one line, `align-content` has no effect.
 
 for practicing flex box: [flexfroggy](https://flexboxfroggy.com/)
+
+
+## CSS Grid
+
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.  
+
+`Difference between grid and flex box.`
+<image src="../assets/css-grid1.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
+<br/><br/>
+`Grid Line`  
+<image src="../assets/css-grid2.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
+<br/><br/>
+`Grid Track`  
+<image src="../assets/css-grid3.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
+<br/><br/>
+`Grid Cell`  
+<image src="../assets/css-grid4.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
+<br/><br/>
+`Grid Area`  
+<image src="../assets/css-grid5.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
