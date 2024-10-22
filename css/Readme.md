@@ -1,8 +1,11 @@
 ## Resources:
 
-fontawesome.com (For fonts and emojis)  
-pexels.com (For free images and videos)
-w3schools.com (For learning CSS)
+[fontawesome](https://fontawesome.com/): For fonts and emojis.  
+[pexels](https://pexels.com/): For free images and videos.  
+[w3schools](https://www.w3schools.com/css/): For learning CSS.  
+[Codepip](https://codepip.com/games/): Games to play for learning flexbox and CSS grid.
+
+
 ## Types of CSS:
 1 - Inline CSS  
 2 - Internal CSS  
@@ -228,7 +231,7 @@ Fixed: The element is positioned relative to the browser window
 ![CSS Position Values](../assets/css-position-values.png)
 
 
-## Flex
+## Flexbox
 
 `display: flex`  
 
@@ -248,3 +251,34 @@ This properties work on single items.
 `flex-basis: 10px;`  
 `flex-shrink:4;`
 
+Note:  
+1 - The two properties `flex-direction` and `flex-wrap` are used so often together that the shorthand property `flex-flow` was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
+
+For example, you can use `flex-flow`: row wrap to set rows and wrap them.
+
+Try using flex-flow to repeat the previous level.
+
+
+2 - `align-items`: This CSS property aligns items vertically and accepts the following values:
+
+`flex-start`: Items align to the top of the container.  
+`flex-end`: Items align to the bottom of the container.  
+`center`: Items align at the vertical center of the container.  
+`baseline`: Items display at the baseline of the container.  
+`stretch`: Items are stretched to fit the container.  
+
+
+
+
+3 - `align-content`: It is used to set how multiple lines are spaced apart from each other. This property takes the following values:
+
+`flex-start`: Lines are packed at the top of the container.  
+`flex-end`: Lines are packed at the bottom of the container.  
+`center`: Lines are packed at the vertical center of the container.  
+`space-between`: Lines display with equal spacing between them.  
+`space-around`: Lines display with equal spacing around them.  
+`stretch`: Lines are stretched to fit the container.  
+
+This can be confusing, but `align-content` determines the spacing between lines, while `align-items` determines how the items as a whole are aligned within the container. When there is only one line, `align-content` has no effect.
+
+for practicing flex box: [flexfroggy](https://flexboxfroggy.com/)
