@@ -215,3 +215,14 @@ CSS inheritance is only applied to typograph related properties to its child and
 }
 ```
 ![CSS Inheritance Example](../assets/css-inheritance.png)
+
+
+## CSS positions
+
+In position relative element is not leaving its position.
+Whereas in position absolute, element is leaving its position.
+
+Fixed: The element is positioned relative to the browser window	
+
+
+![CSS Position Values](../assets/css-position-values.png)

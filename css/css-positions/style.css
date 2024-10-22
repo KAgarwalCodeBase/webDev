@@ -1,0 +1,27 @@
+.container{
+    width: 90%;
+    height: 500px;
+    background-color: rgb(46, 43, 43);
+}
+
+.d{
+    width: 100px;
+    height: 100px;
+}
+
+.one{
+    background-color: red;
+    position: relative;
+    left: 200px
+}
+
+.two{
+    background-color: blue;
+    position: absolute;
+    left: 200px;
+}
+
+.three{
+    background-color: teal;
+    position: fixed;
+}
