@@ -1,0 +1,19 @@
+/*Layout properties are not implicit inherit by children, required to use inherit keyword.*/
+.parent{
+    font-family: Cambria;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    color: orange;
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+}
+
+.children{
+    position: relative;
+    left: 100px;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+}

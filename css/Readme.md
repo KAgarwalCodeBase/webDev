@@ -142,3 +142,76 @@ example: span, img etc.
 
 Go to `fontawesome.com `and search for respective icon and add it's html in the code.
 And also add cdn stylesheet link of font awesome from `cdnjs.com`.
+
+
+## Box Shadow
+
+`index.html`
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
+```
+
+`style.css`
+```
+/* x y blurness color*/
+div{
+    width:200px;
+    height:200px;
+    background:rgb(105, 105, 205);
+    box-shadow: 15px 10px 4px orange;
+}
+```
+
+## CSS Inheritance
+
+Inheritance is when we declare something on an element, and it also applies that element's decendant.
+
+CSS inheritance is only applied to typograph related properties to its child and not for layout related properties.  
+
+`index.html`
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="parent">
+            Hello
+            <div class="children">World</div>
+        </div>
+    </body>
+</html>
+
+```
+`style.css`
+```
+/*Layout properties are not implicit inherit by children, required to use inherit keyword.*/
+.parent{
+    font-family: Cambria;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    color: orange;
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+}
+
+.children{
+    position: relative;
+    left: 100px;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+}
+```
+![CSS Inheritance Example](../assets/css-inheritance.png)

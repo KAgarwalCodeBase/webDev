@@ -1,0 +1,7 @@
+/* x y blurness color*/
+div{
+    width:200px;
+    height:200px;
+    background:rgb(105, 105, 205);
+    box-shadow: 15px 10px 4px orange;
+}
