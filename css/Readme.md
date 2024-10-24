@@ -383,4 +383,4 @@ footer{
 <br/>
 <img src="../assets/css-grid-layout.png" style="border:2px solid orange;" alt="CSS Grid Layout Image">
 
-
+For practicing css grid: [Grid Garden](https://cssgridgarden.com/)
