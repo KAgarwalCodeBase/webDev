@@ -302,3 +302,85 @@ The CSS Grid Layout Module offers a grid-based layout system, with rows and colu
 <br/><br/>
 `Grid Area`  
 <image src="../assets/css-grid5.png" alt="css grid image 1" width="300" style="border: 2px solid orange">
+
+### Need to set display property of container as grid.  
+`display: grid;`  
+
+### For defining number of columns and rows:  
+`grid-template-columns: 100px 100px 100px;`  
+`grid-template-rows: 100px 100px 100px;`  
+
+### By Using repeat function.  
+`grid-template-columns: repeat(3, 100px);`  
+`grid-template-rows: repeat(3, 100px);`  
+
+### Providing name to lines:  
+`grid-template-columns: [startc]100px 100px [endc]100px;`  
+`grid-template-rows: [startr]100px 100px [endr]100px;`  
+
+### Using fractional values with respect to view viewport.  
+`grid-template-columns: 2fr 1fr 3fr;`  
+
+### Using minmax Function, so control the size of element  
+`grid-template-columns: 1fr minmax(200px, 1fr) 1fr;`  
+
+    
+### Using auto-fit  
+`grid-template-columns: repeat(auto-fit, 200px);`  
+
+### Using auto-fill  
+`grid-template-columns: repeat(auto-fill, 200px);`  
+
+## Defining size of particular html element.
+```
+aside {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    /*grid-column: 1/3; (shortcut)*/
+}
+```
+### For Defining the template structure, by using grid-template-area and grid-area.
+
+```
+.container{
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+    height: 100vh;
+    /*Grid Stuff*/
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 10px;
+
+    grid-template-areas: 
+    "h h h h" 
+    "m m m m"
+    "s s . a"
+    "f f f f";
+}
+
+header{
+    grid-area:h;
+}
+
+main{
+    grid-area: m;
+}
+
+section{
+    grid-area: s;
+}
+
+aside {
+    grid-area: a;
+}
+
+footer{
+    grid-area:f;
+}
+```
+<br/>
+<img src="../assets/css-grid-layout.png" style="border:2px solid orange;" alt="CSS Grid Layout Image">
+
+
