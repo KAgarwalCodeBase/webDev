@@ -1,0 +1,21 @@
+body{
+    background-color: coral;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color:aliceblue;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: bisque;
+    }
+}

@@ -384,3 +384,15 @@ footer{
 <img src="../assets/css-grid-layout.png" style="border:2px solid orange;" alt="CSS Grid Layout Image">
 
 For practicing css grid: [Grid Garden](https://cssgridgarden.com/)
+
+## Media Query
+
+Media queries allow you to apply CSS styles depending on a device's media type.
+
+```
+@media screen and (max-width: 900px) {
+    body {
+        background-color:aliceblue;
+    }
+}
+```
