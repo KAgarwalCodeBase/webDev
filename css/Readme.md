@@ -396,3 +396,113 @@ Media queries allow you to apply CSS styles depending on a device's media type.
     }
 }
 ```
+
+## Emits
+
+### Example of Emits in VS Code  
+For using initial html template.  
+`!` [tab]  
+`doc` [tab]
+
+`link` [tab] - for css.  
+`link:css` [enter]  
+`sect` (section)  
+`hdr` (header)  
+`art` (article)  
+
+### For giving id to html element  
+Example: `sect#name`
+```
+<section id="name"><section/>
+```
+
+### For giving class to html element  
+Example: `art.className`  
+```
+<article class="className"></article>
+```
+
+### Nesting html elements   
+Example: `hdr>nav>ul>li>a`  
+```
+<header>
+    <nav>
+        <ul>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+### Multiple html element
+Example: `nav>ul>(li>a)*5` 
+```
+<nav>
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</nav>
+```
+
+### Siblings
+Example: `h1+h2+h3+h4+h5+h6`  
+```
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+```
+
+### Mixed  
+`section>nav>h1.logo{Hello}+p.info{Text}`
+```
+<section>
+    <nav>
+        <h1 class="logo">Hello</h1>
+        <p class="info">Text</p>
+    </nav>
+</section>
+```
+
+### Going Upper Level
+
+Example: `header>nav>ul^h1.logo`
+```
+<header>
+    <nav>
+        <ul></ul>
+    </nav>
+    <h1 class="logo"></h1>
+</header>
+```
+Example: `hdr>nav>ul>li>a^^h1{Text}`
+```
+<header>
+    <nav>
+        <ul>
+            <li><a href=""></a></li>
+        </ul>
+        <h1>Text</h1>
+    </nav>
+</header>
+```
+### Putting numbers.  
+Example:` h1{$}*10`  
+```
+<h1>1</h1>
+<h1>2</h1>
+<h1>3</h1>
+<h1>4</h1>
+<h1>5</h1>
+<h1>6</h1>
+<h1>7</h1>
+<h1>8</h1>
+<h1>9</h1>
+<h1>10</h1>
+```
