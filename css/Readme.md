@@ -506,3 +506,16 @@ Example:` h1{$}*10`
 <h1>9</h1>
 <h1>10</h1>
 ```
+
+## CSS accent-color Property
+
+The accent-color property specifies the accent color for user-interface controls like: <input type="checkbox">, <input type="radio">, <input type="range"> and <progress>.
+
+
+`accent-color: auto|color|initial|inherit;`  
+
+```
+input[type=checkbox] {
+  accent-color: red;
+}
+```
