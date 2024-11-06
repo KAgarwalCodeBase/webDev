@@ -282,3 +282,175 @@ console.log(nurseOlynyk.remainingVacationDays);
 nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
 ```
+
+## Modules
+### [Runtime Environment](https://www.codecademy.com/article/introduction-to-javascript-runtime-environments)
+A runtime environment is where your program will be executed. JavaScript code may be executed in one of two runtime environments:
+
+- a browser’s runtime environment
+- the Node runtime environment  
+
+In each of these environments, different data values and functions are available, and these differences help distinguish front-end applications from back-end applications.
+
+- Front-end JavaScript applications are executed in a browser’s runtime environment and have access to the window object.
+- Back-end JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks attached to the server.
+
+### Modules
+Modules are reusable pieces of code in a file that can be exported and then imported for use in another file. A modular program is one whose components can be separated, used individually, and recombined to create a complex system.
+
+Example:
+```
+/* shape-area.js */
+const PI = Math.PI;
+
+const circleArea = (radius)=>{
+  return PI*radius*radius;
+}
+const squareArea = (side)=>{
+  return side * side;
+}
+module.exports.circleArea = circleArea;
+module.exports.squareArea = squareArea;
+```
+
+```
+/* app.js */ 
+const {circleArea, squareArea} = require('./shape-area.js');
+const radius = 5;
+const sideLength = 10;
+
+const areaOfCircle = circleArea(radius);
+const areaOfSquare = squareArea(sideLength);
+console.log('Circle Area: ', areaOfCircle);
+console.log('Square Area: ', areaOfSquare)
+
+```
+[Implementing modules using ES6 Syntax](https://www.codecademy.com/article/implementing-modules-using-es-6-syntax)
+
+
+
+
+
+## Promises
+Promises are objects that represent the eventual outcome of an asynchronous operation. A Promise object can be in one of three states:
+
+- Pending: The initial state— the operation has not completed yet.
+- Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
+- Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind.
+
+## Async-Await
+
+#### Constructing a Promise Object
+
+```
+const executorFunction = (resolve, reject) => {
+ if (someCondition) {
+     resolve('I resolved!');
+ } else {
+     reject('I rejected!'); 
+}
+const myFirstPromise = new Promise(executorFunction);
+```
+The Promise constructor method takes a function parameter called the executor function which runs automatically when the constructor is called. The executor function generally starts an asynchronous operation and dictates how the promise should be settled.
+
+The executor function has two function parameters, usually referred to as the resolve() and reject() functions. The resolve() and reject() functions aren’t defined by the programmer. When the Promise constructor runs, JavaScript will pass its own resolve() and reject() functions into the executor function.
+
+- resolve is a function with one argument. Under the hood, if invoked, resolve() will change the promise’s status from pending to fulfilled, and the promise’s resolved value will be set to the argument passed into resolve().
+
+- reject is a function that takes a reason or error as an argument. Under the hood, if invoked, reject() will change the promise’s status from pending to rejected, and the promise’s rejection reason will be set to the argument passed into reject().
+
+```
+let prom = new Promise((resolve, reject) => {
+  let num = Math.random();
+  if (num < .5 ){
+    resolve('Yay!');
+  } else {
+    reject('Ohhh noooo!');
+  }
+});
+
+//Success Handler
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+//Failure Handler
+const handleFailure = (rejectionReason) => {
+  console.log(rejectionReason);
+};
+
+prom.then(handleSuccess, handleFailure);
+```
+
+Better way of handling failure cases i.e following separation of concern.
+```
+prom.then(handleSuccess).catch(handleFailure);
+```
+
+### Chaining Multiple Promises
+One common pattern we’ll see with asynchronous programming is multiple operations which depend on each other to execute or that must be executed in a certain order. This process of chaining promises together is called composition.
+
+Example:
+```
+const {checkInventory, processPayment, shipOrder} = require('./library.js');
+
+const order = {
+  items: [['sunglasses', 1], ['bags', 2]],
+  giftcardBalance: 79.82
+};
+
+checkInventory(order)
+.then((resolvedValueArray) => {
+  return processPayment(resolvedValueArray);
+})
+.then((resolvedValueArray) => {
+  return shipOrder(resolvedValueArray);
+})
+.then((successMessage) => {
+  console.log(successMessage);
+})
+.catch((errorMessage) => {
+  console.log(errorMessage);
+});
+```
+
+### Avoiding Comman Mistakes while using Promises
+`Mistake 1: Nesting promises instead of chaining them`
+```returnsFirstPromise()
+.then((firstResolveVal) => {
+  return returnsSecondValue(firstResolveVal)
+    .then((secondResolveVal) => {
+      console.log(secondResolveVal);
+    })
+})
+```
+<br/>
+
+`Mistake 2: Forgetting to return a promise.`
+```
+returnsFirstPromise()
+.then((firstResolveVal) => {
+  returnsSecondValue(firstResolveVal)
+})
+.then((someVal) => {
+  console.log(someVal);
+})
+```
+
+### Promise.all()
+- We need to execute multiple promises which does not depends upon each other, but it's important that all promises should be resolved successfully. So, for concurrent execution of promises we are using promise.all()
+- Promise.all() accepts an array of promises as its argument and returns a single promise. That single promise will settle in one of two ways:
+- If every promise in the argument array resolves, the single promise returned from Promise.all() will resolve with an array containing the resolve value from each promise in the argument array.
+- If any promise from the argument array rejects, the single promise returned from Promise.all() will immediately reject with the reason that promise rejected. This behavior is sometimes referred to as failing fast.
+## Requests
+## Errors and Error Handling
+## Javascript Under the Hood
+
+
+<!-- Hunx -->
+setInterval()
+setTimeOut()
+clearInterval()
+
+
+
