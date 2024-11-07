@@ -532,11 +532,11 @@ usingTryCatch();
 
 ## Requests
 
+`Get Request using Fetch`
 <img src='../assets/get-request-using-fetch.png' style='border: 2px solid white; margin:2rem 20% 0 20%;'>
-<figcaption style='margin-left:50%; color:white;'>Fig.1 - Get Request using Fetch</figcaption>
 
+`Post Request using Fetch`
 <img src='../assets/post-request-using-fetch.png' style='border: 2px solid white; margin:2rem 20% 0 20%;'>
-<figcaption style='margin-left:50%; color:white;'>Fig.2 - Post Request using Fetch</figcaption>
 
 
 
