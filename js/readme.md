@@ -1,33 +1,35 @@
-
 ## Commonly Used Method:
+
 `Math.random()` - Generating float number between 0 (inclusive) and 1(exclusive);  
 `Math.floor(Math.random()*max)` - Generating Integer between 0 and max-1  
 `name = name.toLowerCase()`  
-`name = name.toUpperCase()` 
-
+`name = name.toUpperCase()`
 
 ## Data Types
+
 In JavaScript, there are eight fundamental data types:
 
--   `Number`: Any number, including numbers with decimals: 4, 8, 1516, 23.42.
--   BigInt: Any number, greater than 253-1 or less than -(253-1), with n appended to the number: 1234567890123456n.
--   `String`: Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to think of string as a fancy word for text.
--   `Boolean`: This data type only has two possible values— either true or false (without quotes). It’s helpful to think of booleans as on and off switches or as the answers to a “yes” or “no” question.
--   `Null`: This data type represents the intentional absence of a value, and is represented by the keyword null (without quotes).
--   `Undefined`: This data type is denoted by the keyword undefined (without quotes). It also represents the absence of a value though it has a different use than null. undefined means that a given value does not exist.
--   `Symbol`: A newer feature to the language, symbols are unique identifiers, useful in more complex coding.
--   `Object`: Collections of related data.
+- `Number`: Any number, including numbers with decimals: 4, 8, 1516, 23.42.
+- BigInt: Any number, greater than 253-1 or less than -(253-1), with n appended to the number: 1234567890123456n.
+- `String`: Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to think of string as a fancy word for text.
+- `Boolean`: This data type only has two possible values— either true or false (without quotes). It’s helpful to think of booleans as on and off switches or as the answers to a “yes” or “no” question.
+- `Null`: This data type represents the intentional absence of a value, and is represented by the keyword null (without quotes).
+- `Undefined`: This data type is denoted by the keyword undefined (without quotes). It also represents the absence of a value though it has a different use than null. undefined means that a given value does not exist.
+- `Symbol`: A newer feature to the language, symbols are unique identifiers, useful in more complex coding.
+- `Object`: Collections of related data.
 
 ### The list of falsy values includes:
 
--   `0`  
--   Empty strings like `""` or `''`  
--   `null` which represent when there is no value at all  
--   `undefined` which represent when a declared variable lacks a value  
--   `NaN`, or Not a Number  
- 
-## [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)  
+- `0`
+- Empty strings like `""` or `''`
+- `null` which represent when there is no value at all
+- `undefined` which represent when a declared variable lacks a value
+- `NaN`, or Not a Number
+
+## [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+
 Hoisting feature in JavaScript which allows access to function declarations before they’re defined.
+
 ```
 greetWorld(); // Output: Hello, World!
 
@@ -35,6 +37,7 @@ function greetWorld() {
   console.log('Hello, World!');
 }
 ```
+
 Notice how hoisting allowed greetWorld() to be called before the greetWorld() function was defined! Since hoisting isn’t considered good practice.
 
 ## Function Expression
@@ -51,6 +54,7 @@ const caluculateArea = function(width, height){
 Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined.
 
 ## Arrow Functions
+
 ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
 
 Arrow functions
@@ -63,8 +67,8 @@ const rectangleArea = (width, height) => {
 };
 ```
 
-
 ## Scope
+
 - `Scope` refers to where variables can be accessed throughout the program, and is determined by where and how they are declared.
 - `Blocks` are statements that exist within curly braces {}.
 - `Global scope `refers to the context within which variables are accessible to every part of the program.
@@ -74,14 +78,13 @@ const rectangleArea = (width, height) => {
 - `Global namespace` is the space in our code that contains globally scoped information.
 - `Scope pollution` is when too many variables exist in a namespace or variable names are reused.
 
-
 ## Array methods
 
 `push(ele)` - from end  
 `pop()` - from end  
 `shift()` - from start  
-`unshift(ele)` - from start   
-`slice(start_index, end_index)` - creating sublist   
+`unshift(ele)` - from start  
+`slice(start_index, end_index)` - creating sublist  
 `indexOf` : index of particular element ex: groceryList.indexOf('pasta');  
 `splice`: To replace subarray with another array.
 
@@ -89,13 +92,13 @@ Array is pass-by-reference in JS.
 
 ## Function
 
-In JavaScript, functions are first class objects. This means that, like other 
+In JavaScript, functions are first class objects. This means that, like other
 objects you’ve encountered, JavaScript functions can have properties and methods.
 
 Since functions are a type of object, they have properties such as .length and .name, and methods such as .toString()
 
+## Higher Order Function
 
-## Higher Order Function 
 A higher-order function is a function that either accepts functions as parameters, returns a function, or both! We call functions that get passed in as parameters callback functions. Callback functions get invoked during the execution of the higher-order function.
 
 ```
@@ -103,7 +106,7 @@ const higherOrderFunc = param => {
   param();
   return `I just invoked ${param.name} as a callback function!`
 }
- 
+
 const anotherFunc = () => {
   return 'I\'m being invoked by the higher-order function!';
 }
@@ -113,14 +116,14 @@ higherOrderFunc(anotherFunc);
 
 `.forEach` - loop through the array.  
 `.map` - create new array with a new element as per given condition in callback function  
-`.filter` - filter the array as per given condition in callback function.   
+`.filter` - filter the array as per given condition in callback function.  
 `.findIndex` - return index of first match.  
-`.reduce` -  reduce an array to single value as per given condition in callback function.  
-`.some` -  Check whether at least one element in the array passes the test.  
-`.every` -  Check whether all element in the array passes the test.
-
+`.reduce` - reduce an array to single value as per given condition in callback function.  
+`.some` - Check whether at least one element in the array passes the test.  
+`.every` - Check whether all element in the array passes the test.
 
 ## Arrow Functions and this
+
 ```
 const goat = {
   dietType: 'herbivore',
@@ -139,8 +142,8 @@ Arrow functions inherently bind, or tie, an already defined this value to the fu
 
 `The key takeaway from the example above is to avoid using arrow functions when using this in a method!`
 
-
 ## Getters
+
 Getters are methods that get and return the internal properties of an object.
 
 ```
@@ -156,7 +159,7 @@ const person = {
   }
 }
 
-// To call the getter method: 
+// To call the getter method:
 person.fullName; // 'John Doe'
 ```
 
@@ -180,17 +183,20 @@ const person = {
 ## Property Value Shorthand
 
 Destructuring technique, called property value shorthand, to save ourselves some keystrokes.
+
 ```
 const monsterFactory = (name, age) => {
-  return { 
+  return {
     name,
-    age 
+    age
   }
 };
 ```
 
 ## Destructured Assignment
+
 In destructured assignment we create a variable with the name of an object’s key that is wrapped in curly braces { } and assign to it the object.
+
 ```
 const vampire = {
   name: 'Dracula',
@@ -201,21 +207,22 @@ const vampire = {
   }
 };
 
-const { residence } = vampire; 
+const { residence } = vampire;
 console.log(residence); // Prints 'Transylvania'
 
 ```
 
 ## Classes
 
-- Classes are templates for objects.  
-- JavaScript calls a constructor method when we create a new instance of a class.  
-- Inheritance is when we create a parent class with properties and methods that we can extend to child classes.  
+- Classes are templates for objects.
+- JavaScript calls a constructor method when we create a new instance of a class.
+- Inheritance is when we create a parent class with properties and methods that we can extend to child classes.
 - We use the extends keyword to create a subclass.
 - The super keyword calls the constructor() of a parent class.
 - Static methods are called on the class, but not on instances of the class.
 
 `Parent Class`
+
 ```
 class HospitalEmployee {
   //Constructor
@@ -226,19 +233,19 @@ class HospitalEmployee {
 
   //Static Method
   static generatePassword(){
-    return Math.floor(Math.random()*10000)    
+    return Math.floor(Math.random()*10000)
   }
-  
+
   //Getter Method
   get name() {
     return this._name;
   }
-  
+
   //Getter Method
   get remainingVacationDays() {
     return this._remainingVacationDays;
   }
-  
+
   //Class Method
   takeVacationDays(daysOff) {
     this._remainingVacationDays -= daysOff;
@@ -247,20 +254,21 @@ class HospitalEmployee {
 ```
 
 `Child Class`
+
 ```
 //using extend keyword for inheriting parent class.
 class Nurse extends HospitalEmployee {
-  
+
   constructor(name, certifications) {
     //invoking super method for calling parent class constructor
     super(name);
     this._certifications = certifications;
-  } 
-  
+  }
+
   get certifications() {
     return this._certifications;
   }
-  
+
   addCertification(newCertification) {
     this.certifications.push(newCertification);
   }
@@ -268,6 +276,7 @@ class Nurse extends HospitalEmployee {
 ```
 
 `Driver Code`
+
 ```
 //Creating object of Nurse class.
 const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
@@ -284,11 +293,13 @@ console.log(nurseOlynyk.certifications);
 ```
 
 ## Modules
+
 ### [Runtime Environment](https://www.codecademy.com/article/introduction-to-javascript-runtime-environments)
+
 A runtime environment is where your program will be executed. JavaScript code may be executed in one of two runtime environments:
 
 - a browser’s runtime environment
-- the Node runtime environment  
+- the Node runtime environment
 
 In each of these environments, different data values and functions are available, and these differences help distinguish front-end applications from back-end applications.
 
@@ -296,9 +307,11 @@ In each of these environments, different data values and functions are available
 - Back-end JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks attached to the server.
 
 ### Modules
+
 Modules are reusable pieces of code in a file that can be exported and then imported for use in another file. A modular program is one whose components can be separated, used individually, and recombined to create a complex system.
 
 Example:
+
 ```
 /* shape-area.js */
 const PI = Math.PI;
@@ -314,7 +327,7 @@ module.exports.squareArea = squareArea;
 ```
 
 ```
-/* app.js */ 
+/* app.js */
 const {circleArea, squareArea} = require('./shape-area.js');
 const radius = 5;
 const sideLength = 10;
@@ -325,32 +338,29 @@ console.log('Circle Area: ', areaOfCircle);
 console.log('Square Area: ', areaOfSquare)
 
 ```
+
 [Implementing modules using ES6 Syntax](https://www.codecademy.com/article/implementing-modules-using-es-6-syntax)
 
-
-
-
-
 ## Promises
+
 Promises are objects that represent the eventual outcome of an asynchronous operation. A Promise object can be in one of three states:
 
 - Pending: The initial state— the operation has not completed yet.
 - Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
 - Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind.
 
-## Async-Await
-
-#### Constructing a Promise Object
+### Constructing a Promise Object
 
 ```
 const executorFunction = (resolve, reject) => {
  if (someCondition) {
      resolve('I resolved!');
  } else {
-     reject('I rejected!'); 
+     reject('I rejected!');
 }
 const myFirstPromise = new Promise(executorFunction);
 ```
+
 The Promise constructor method takes a function parameter called the executor function which runs automatically when the constructor is called. The executor function generally starts an asynchronous operation and dictates how the promise should be settled.
 
 The executor function has two function parameters, usually referred to as the resolve() and reject() functions. The resolve() and reject() functions aren’t defined by the programmer. When the Promise constructor runs, JavaScript will pass its own resolve() and reject() functions into the executor function.
@@ -383,14 +393,17 @@ prom.then(handleSuccess, handleFailure);
 ```
 
 Better way of handling failure cases i.e following separation of concern.
+
 ```
 prom.then(handleSuccess).catch(handleFailure);
 ```
 
 ### Chaining Multiple Promises
+
 One common pattern we’ll see with asynchronous programming is multiple operations which depend on each other to execute or that must be executed in a certain order. This process of chaining promises together is called composition.
 
 Example:
+
 ```
 const {checkInventory, processPayment, shipOrder} = require('./library.js');
 
@@ -415,7 +428,9 @@ checkInventory(order)
 ```
 
 ### Avoiding Comman Mistakes while using Promises
+
 `Mistake 1: Nesting promises instead of chaining them`
+
 ```returnsFirstPromise()
 .then((firstResolveVal) => {
   return returnsSecondValue(firstResolveVal)
@@ -424,9 +439,11 @@ checkInventory(order)
     })
 })
 ```
+
 <br/>
 
 `Mistake 2: Forgetting to return a promise.`
+
 ```
 returnsFirstPromise()
 .then((firstResolveVal) => {
@@ -438,19 +455,97 @@ returnsFirstPromise()
 ```
 
 ### Promise.all()
+
 - We need to execute multiple promises which does not depends upon each other, but it's important that all promises should be resolved successfully. So, for concurrent execution of promises we are using promise.all()
 - Promise.all() accepts an array of promises as its argument and returns a single promise. That single promise will settle in one of two ways:
 - If every promise in the argument array resolves, the single promise returned from Promise.all() will resolve with an array containing the resolve value from each promise in the argument array.
 - If any promise from the argument array rejects, the single promise returned from Promise.all() will immediately reject with the reason that promise rejected. This behavior is sometimes referred to as failing fast.
+
+## Async-Await
+
+### Async
+
+The async keyword is used to write functions that handle asynchronous actions. We wrap our asynchronous logic inside a function prepended with the async keyword. Then, we invoke that function.
+
+async functions always return a promise. This means we can use traditional promise syntax, like .then() and .catch with our async functions. An async function will return in one of three ways:
+
+If there’s nothing returned from the function, it will return a promise with a resolved value of undefined.
+If there’s a non-promise value returned from the function, it will return a promise resolved to that value.
+If a promise is returned from the function, it will simply return that promise
+
+```
+async function fivePromise() {
+  return 5;
+}
+
+fivePromise()
+.then(resolvedValue => {
+    console.log(resolvedValue);
+  })  // Prints 5
+
+```
+
+In the example above, even though we return 5 inside the function body, what’s actually returned when we invoke fivePromise() is a promise with a resolved value of 5.
+
+### Await
+
+The await keyword can only be used inside an async function. await is an operator: it returns the resolved value of a promise. Since promises resolve in an indeterminate amount of time, await halts, or pauses, the execution of our async function until a given promise is resolved.
+
+```
+const brainstormDinner = require('./library.js');
+
+// Native promise version:
+function nativePromiseDinner() {
+  brainstormDinner().then((meal) => {
+	  console.log(`I'm going to make ${meal} for dinner.`);
+  });
+}
+
+// async/await version:
+async function announceDinner() {
+    const meal = await brainstormDinner();
+    console.log(`I'm going to make ${meal} for dinner.`);
+}
+announceDinner()
+```
+
+Note:  
+await keyword halts the execution of an async function until a promise is no longer pending. Don’t forget the await keyword! It may seem obvious, but this can be a tricky mistake to catch because our function will still run— it just won’t have the desired results.
+
+### Handling Errors
+
+With async...await, we use try...catch statements for error handling. By using this syntax, not only are we able to handle errors in the same way we do with synchronous code, but we can also catch both synchronous and asynchronous errors.
+
+```
+async function usingTryCatch() {
+ try {
+   let resolveValue = await asyncFunction('thing that will fail');
+   let secondValue = await secondAsyncFunction(resolveValue);
+ } catch (err) {
+   // Catches any errors in the try block
+   console.log(err);
+ }
+}
+
+usingTryCatch();
+```
+
 ## Requests
+
+<img src='../assets/get-request-using-fetch.png' style='border: 2px solid white; margin:2rem 20% 0 20%;'>
+<figcaption style='margin-left:50%; color:white;'>Fig.1 - Get Request using Fetch</figcaption>
+
+<img src='../assets/post-request-using-fetch.png' style='border: 2px solid white; margin:2rem 20% 0 20%;'>
+<figcaption style='margin-left:50%; color:white;'>Fig.2 - Post Request using Fetch</figcaption>
+
+
+
 ## Errors and Error Handling
+
 ## Javascript Under the Hood
 
-
 <!-- Hunx -->
+
 setInterval()
 setTimeOut()
 clearInterval()
-
-
-
