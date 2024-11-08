@@ -1,9 +1,35 @@
+# Javascript
+## Table of Contents
+- [Commonly Used Method](#commonly-used-method)
+- [Data Types](#data-types)
+- [Hoisting](#hoisting)
+- [Functional Expression](#functional-expression)
+- [Arrow Functions](#arrow-functions)
+- [Scope](#scope)
+- [Array Methods](#array-methods)
+- [Functions](#functions)
+- [Higher Order Function](#higher-order-function)
+- [Arrow Function and this](#arrow-functions-and-this)
+- [Getter](#getter)
+- [Setter](#setter)
+- [Property Value Shorthand](#property-value-shorthand)
+- [Destructured Assignment](#destructured-assignment)
+- [Classes](#classes)
+- [Modules](#modules)
+- [Promises](#promises)
+- [Async-Await](#async-await)
+- [Requests](#requests)
+- [setInterval()](#setinterval)
+- [setTimeout()](#settimeout)
+- [clearInterval()](#clearinterval)
 ## Commonly Used Method:
 
 `Math.random()` - Generating float number between 0 (inclusive) and 1(exclusive);  
 `Math.floor(Math.random()*max)` - Generating Integer between 0 and max-1  
 `name = name.toLowerCase()`  
 `name = name.toUpperCase()`
+
+ <sub>[back to top](#table-of-contents)</sub>
 
 ## Data Types
 
@@ -26,6 +52,8 @@ In JavaScript, there are eight fundamental data types:
 - `undefined` which represent when a declared variable lacks a value
 - `NaN`, or Not a Number
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
 Hoisting feature in JavaScript which allows access to function declarations before they’re defined.
@@ -40,7 +68,9 @@ function greetWorld() {
 
 Notice how hoisting allowed greetWorld() to be called before the greetWorld() function was defined! Since hoisting isn’t considered good practice.
 
-## Function Expression
+<sub>[back to top](#table-of-contents)</sub>
+
+## Functional Expression
 
 Another way to define a function is to use a function expression. To define a function inside an expression, we can use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. A function expression is often stored in a variable in order to refer to it.
 
@@ -53,6 +83,7 @@ const caluculateArea = function(width, height){
 
 Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined.
 
+<sub>[back to top](#table-of-contents)</sub>
 ## Arrow Functions
 
 ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
@@ -67,6 +98,8 @@ const rectangleArea = (width, height) => {
 };
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Scope
 
 - `Scope` refers to where variables can be accessed throughout the program, and is determined by where and how they are declared.
@@ -77,6 +110,8 @@ const rectangleArea = (width, height) => {
 - `Local variables` are variables that exist within block scope.
 - `Global namespace` is the space in our code that contains globally scoped information.
 - `Scope pollution` is when too many variables exist in a namespace or variable names are reused.
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Array methods
 
@@ -90,12 +125,16 @@ const rectangleArea = (width, height) => {
 
 Array is pass-by-reference in JS.
 
-## Function
+<sub>[back to top](#table-of-contents)</sub>
+
+## Functions
 
 In JavaScript, functions are first class objects. This means that, like other
 objects you’ve encountered, JavaScript functions can have properties and methods.
 
 Since functions are a type of object, they have properties such as .length and .name, and methods such as .toString()
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Higher Order Function
 
@@ -122,6 +161,8 @@ higherOrderFunc(anotherFunc);
 `.some` - Check whether at least one element in the array passes the test.  
 `.every` - Check whether all element in the array passes the test.
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Arrow Functions and this
 
 ```
@@ -142,9 +183,11 @@ Arrow functions inherently bind, or tie, an already defined this value to the fu
 
 `The key takeaway from the example above is to avoid using arrow functions when using this in a method!`
 
-## Getters
+<sub>[back to top](#table-of-contents)</sub>
 
-Getters are methods that get and return the internal properties of an object.
+## Getter
+
+Getter are methods that get and return the internal properties of an object.
 
 ```
 const person = {
@@ -162,6 +205,7 @@ const person = {
 // To call the getter method:
 person.fullName; // 'John Doe'
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Setter
 
@@ -179,6 +223,7 @@ const person = {
   }
 };
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Property Value Shorthand
 
@@ -192,6 +237,7 @@ const monsterFactory = (name, age) => {
   }
 };
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Destructured Assignment
 
@@ -211,6 +257,7 @@ const { residence } = vampire;
 console.log(residence); // Prints 'Transylvania'
 
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Classes
 
@@ -291,6 +338,7 @@ console.log(nurseOlynyk.remainingVacationDays);
 nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Modules
 
@@ -340,6 +388,8 @@ console.log('Square Area: ', areaOfSquare)
 ```
 
 [Implementing modules using ES6 Syntax](https://www.codecademy.com/article/implementing-modules-using-es-6-syntax)
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Promises
 
@@ -461,6 +511,8 @@ returnsFirstPromise()
 - If every promise in the argument array resolves, the single promise returned from Promise.all() will resolve with an array containing the resolve value from each promise in the argument array.
 - If any promise from the argument array rejects, the single promise returned from Promise.all() will immediately reject with the reason that promise rejected. This behavior is sometimes referred to as failing fast.
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Async-Await
 
 ### Async
@@ -529,6 +581,7 @@ async function usingTryCatch() {
 
 usingTryCatch();
 ```
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Requests
 
@@ -538,14 +591,63 @@ usingTryCatch();
 ### `Post Request using Fetch`
 <img src='../assets/post-request-using-fetch.png' style='border: 2px solid white; margin:2rem 20% 0 20%;'>
 
+<sub>[back to top](#table-of-contents)</sub>
 
+## setInterval()
+`setInterval()` repeatedly executes a function or code snippet, with a fixed time delay between each call. It continues to run until it’s explicitly stopped using clearInterval().
 
-## Errors and Error Handling
+**Syntax:**
+```
+setInterval(function, delay);
+```
+**Example:**
+```
+// Logs "Hello!" to the console every 2 seconds
+const intervalId = setInterval(() => {
+  console.log("Hello!");
+}, 2000);
+```
 
-## Javascript Under the Hood
+<sub>[back to top](#table-of-contents)</sub>
 
-<!-- Hunx -->
+## setTimeout()
+`setTimeout()` executes a function or code snippet once after a specified delay. It only runs the function once after the delay and stops automatically.
 
-setInterval()
-setTimeOut()
-clearInterval()
+**Syntax:**
+```
+setTimeout(function, delay);
+```
+
+**Example:**
+```
+// Logs "Hello!" to the console after 3 seconds
+setTimeout(() => {
+  console.log("Hello!");
+}, 3000);
+```
+
+<sub>[back to top](#table-of-contents)</sub>
+
+## clearInterval()
+`clearInterval()` stops an ongoing interval set by `setInterval()` using its ID.
+
+**Syntax:**
+```
+clearInterval(intervalId);
+```
+***Example:***
+```
+// Starts an interval that logs "Hello!" every 2 seconds
+const intervalId = setInterval(() => {
+  console.log("Hello!");
+}, 2000);
+
+// Stops the interval after 10 seconds
+setTimeout(() => {
+  clearInterval(intervalId);
+  console.log("Interval stopped!");
+}, 10000);
+```
+In this example, "Hello!" will be logged every 2 seconds, and after 10 seconds, `clearInterval()` stops the recurring action.
+
+<sub>[back to top](#table-of-contents)</sub>
