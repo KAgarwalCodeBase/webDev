@@ -69,6 +69,21 @@ let ordersArray: [Pet, number][] = [
 ];
 ```
 
+## Object Types
+
+```
+let aPerson: {name: string, age: number};
+
+// Type error: age property has the wrong type.
+aPerson = {name: 'Aisle Nevertell', age: "wouldn't you like to know"}; 
+
+// Type error: no age property.
+aPerson = {name: 'Kushim', yearsOld: 5000};  
+
+// Valid code. 
+aPerson = {name: 'User McCodecad', age: 22}; 
+```
+
 ## Type Aliases
 Instead of writing long complex type of objects every time, use alias for it.
 
@@ -114,4 +129,29 @@ let aStringFamily: Family<string> = {
   mate: 'string next door', 
   children: ['stringy', 'stringo', 'stringina', 'stringolio']
 }; 
+```
+
+## Generic Functions
+
+```
+//Generic Function Declaration
+function getFilledArray<T>(value: T, n: number): T[] {
+  return Array(n).fill(value);
+}
+
+//Type alias
+type Person =  {name: string, age: number};
+type Coord = [number, number];
+
+//Variable declaration
+let stringArray: string[];
+let numberArray: number[];
+let personArray: Person[];
+let coordinateArray: Coord[];
+
+// Generic Function Calling:
+stringArray = getFilledArray<string>('hi', 6);
+numberArray = getFilledArray<number>(9, 6);
+personArray = getFilledArray<Person>({name:'J. Dean',age: 24}, 6);
+coordinateArray = getFilledArray<Coord>([3,4], 6);
 ```
