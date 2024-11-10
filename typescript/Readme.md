@@ -155,3 +155,41 @@ numberArray = getFilledArray<number>(9, 6);
 personArray = getFilledArray<Person>({name:'J. Dean',age: 24}, 6);
 coordinateArray = getFilledArray<Coord>([3,4], 6);
 ```
+
+## Unions
+
+`string or number = string | number`
+
+## Type Narrowing
+Type narrowing is when TypeScript can figure out what type a variable can be at a given point in our code.
+Example:
+```
+function formatValue(value: string | number) {
+  if(typeof value==='string'){
+    console.log(value.toLowerCase());
+  }else if(typeof value==='number'){
+    console.log(value.toFixed(2))
+  }
+}
+
+formatValue('Hiya');
+formatValue(42);
+```
+
+## Unions with Literal Types
+```
+type Status = 'idle' | 'downloading' | 'complete'
+
+function downloadStatus(status: Status)
+{
+  if(status==='idle')
+      console.log('Download');
+  if(status==='downloading')
+      console.log('Downloading...');
+  if(status==='complete')
+    console.log('Your download is complete!');
+}
+downloadStatus('idle')
+//Throw error because argument is not and type `Status`
+downloadStatus('Stop')
+```
