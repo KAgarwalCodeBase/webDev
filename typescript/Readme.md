@@ -331,3 +331,43 @@ const mySquare: Square = { sideLength: 10, color: 'blue' };
 ```
 
 <sub>[back to top](#table-of-contents)</sub>
+
+
+## Readonly Properties
+```
+type User = {
+    name : string,
+    readonly email: string,
+}
+let user = {
+    name: "kaushal",
+    email: "abc@gmail.com"
+}
+
+//It will raise an error because email is readonly property.
+user.email = 'xyz@gmail.com'
+```
+
+## Intersection Type
+A way to combine multiple types.
+
+```
+type Person = {
+    name: string,
+    age: number
+}
+
+type Employee = {
+    id: number,
+    title: string
+}
+
+type PersonAndEmployee = Person & Employee
+
+const alice: PersonAndEmployee = {
+    name: 'alice',
+    age: 27,
+    id: 123,
+    title: "Manager"
+}
+```
