@@ -1,3 +1,24 @@
+# CSS
+## Table of Contents
+- [Resources](#resources)
+- [Types of CSS](#types-of-css)
+- [Colors](#colors)
+- [Units](#units)
+- [Font Formatting in CSS](#font-formatting-in-css)
+- [Box Model](#box-model)
+- [Gradient in CSS](#gradient-in-css)
+- [Filters](#filters)
+- [Advance Selector in CSS](#advance-selector-in-css)
+- [Display Property in CSS](#display-property-in-css)
+- [Using Fonts](#using-fonts)
+- [Box Shadow](#box-shadow)
+- [CSS Inheritance](#css-inheritance)
+- [CSS Position](#css-positions)
+- [Flexbox](#flexbox)
+- [CSS Grid](#css-grid)
+- [Media Query](#media-query)
+- [Emits](#emits)
+- [CSS Accent Color Property](#css-accent-color-property)
 ## Resources:
 
 [fontawesome](https://fontawesome.com/): For fonts and emojis.  
@@ -5,16 +26,19 @@
 [w3schools](https://www.w3schools.com/css/): For learning CSS.  
 [Codepip](https://codepip.com/games/): Games to play for learning flexbox and CSS grid.
 
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Types of CSS:
 1 - Inline CSS  
 2 - Internal CSS  
 3 - External CSS  
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Colors
 1 - Colors Name  
 2 - RGB  
 3 - HEX  
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Units:
 There are two types of length units: absolute and relative.
@@ -38,6 +62,8 @@ There are two types of length units: absolute and relative.
 `font-weight: bold;`  
 
 For using more fonts: https://fonts.google.com
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Box model
 
@@ -73,6 +99,8 @@ For using more fonts: https://fonts.google.com
 `background-position: bottom;`  
 `background-attachment: fixed;`   
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Gradient in CSS
 There are two types of gradient linear and radial.
 
@@ -80,12 +108,15 @@ There are two types of gradient linear and radial.
 
 `background-image: radial-gradient(blue, skyblue), url(...);`
 
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Filters
 
 `filter: blur(10px);`  
 `filter: brightness(50%);`  
 for more info: https://www.w3schools.com/cssref/css3_pr_filter.php
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Advance Selector in CSS
 
@@ -126,6 +157,8 @@ This selector will select the div which have class text.
 `List of all CSS selectors`
 ![CSS selector Img](../assets/css-selectors.png)
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Display Property in CSS
 
 `Inline`: It does not take height and width
@@ -141,11 +174,13 @@ example: span, img etc.
 ![CSS selector Img](../assets/css-display-property.png)
 
 
+<sub>[back to top](#table-of-contents)</sub>
 ## Using Fonts
 
 Go to `fontawesome.com `and search for respective icon and add it's html in the code.
 And also add cdn stylesheet link of font awesome from `cdnjs.com`.
 
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Box Shadow
 
@@ -172,6 +207,8 @@ div{
     box-shadow: 15px 10px 4px orange;
 }
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## CSS Inheritance
 
@@ -220,6 +257,8 @@ CSS inheritance is only applied to typography related properties to its child an
 ![CSS Inheritance Example](../assets/css-inheritance.png)
 
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## CSS positions
 
 In position relative element is not leaving its position.
@@ -230,6 +269,8 @@ Fixed: The element is positioned relative to the browser window
 
 ![CSS Position Values](../assets/css-position-values.png)
 
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Flexbox
 
@@ -283,7 +324,7 @@ This can be confusing, but `align-content` determines the spacing between lines,
 
 for practicing flex box: [flexfroggy](https://flexboxfroggy.com/)
 
-
+<sub>[back to top](#table-of-contents)</sub>
 ## CSS Grid
 
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.  
@@ -331,7 +372,7 @@ The CSS Grid Layout Module offers a grid-based layout system, with rows and colu
 ### Using auto-fill  
 `grid-template-columns: repeat(auto-fill, 200px);`  
 
-## Defining size of particular html element.
+### Defining size of particular html element.
 ```
 aside {
     grid-column-start: 1;
@@ -385,6 +426,8 @@ footer{
 
 For practicing css grid: [Grid Garden](https://cssgridgarden.com/)
 
+
+<sub>[back to top](#table-of-contents)</sub>
 ## Media Query
 
 Media queries allow you to apply CSS styles depending on a device's media type.
@@ -397,6 +440,7 @@ Media queries allow you to apply CSS styles depending on a device's media type.
 }
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
 ## Emits
 
 ### Example of Emits in VS Code  
@@ -507,6 +551,7 @@ Example:` h1{$}*10`
 <h1>10</h1>
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
 ## CSS accent-color Property
 
 The accent-color property specifies the accent color for user-interface controls like: <input type="checkbox">, <input type="radio">, <input type="range"> and <progress>.
@@ -519,3 +564,4 @@ input[type=checkbox] {
   accent-color: red;
 }
 ```
+<sub>[back to top](#table-of-contents)</sub>
