@@ -1,10 +1,34 @@
 # Typescript
+## Table of Contents
+-   [Typescript](#typescript)
+-   [Type Inference](#type-inference)
+-   [Any](#any)
+-   [Variable Type Annotation](#variable-type-annotations)
+-   [Optional Parameters](#optional-parameters)
+-   [Complex Types](#complex-types)
+-   [Object Types](#object-types)
+-   [Type Aliases](#type-aliases)
+-   [Function Types](#function-types)
+-   [Generic Types](#generic-types)
+-   [Generic Functions](#generic-functions)
+-   [Unions](#unions)
+-   [Type Narrowing](#type-narrowing)
+-   [Using `in` with type guards](#using-in-with-type-guards)
+-   [Unions with literal types](#unions-with-literal-types)
+-   [Using interface keyward to define a type](#using-interface-keyword-to-define-a-type)
+-   [Interfaces and Classes](#interfaces-and-classes)
+-   [Extending Interfaces](#extending-interfaces)
+
+## Typescript
+
 TypeScript is a programming language that adds types to JavaScript. It allows us to write JavaScript with a set of tools called a type system that can spot potential bugs in, clarify the structure of, and help refactor our code.
 
 -   First, we write TypeScript code in files with the extension .ts.
 -   Next, we run our code through the TypeScript transpiler. The transpiler will check that the code adheres to TypeScript’s standards, and it will display errors when it does not.
 -   If the TypeScript code can be converted into working JavaScript, the transpiler will output a JavaScript version of the file (.js).
 -   TypeScript code is a superset of JavaScript code—it has all the features of traditional JavaScript but adds some new features.
+
+<sub>[back to top](#table-of-contents)</sub>
 
 
 ## Type inference  
@@ -17,6 +41,9 @@ let order = 'first';
 order = 1;
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
+
 ## Any
 There are some places where TypeScript will not try to infer what type something is—generally when a variable is declared without being assigned an initial value. In situations where it isn’t able to infer a type, TypeScript will consider a variable to be of type any.
 
@@ -28,6 +55,8 @@ onOrOff = 1;
 onOrOff = false;
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Variable Type Annotations
 Variables can have type annotations (also known as type declarations) added just after their names. We provide a type annotation by appending a variable with a colon (:) and the type (e.g., number, string, or any).
 ```
@@ -38,7 +67,9 @@ mustBeAString = 1337;
 // Error: Type 'number' is not assignable to type 'string'
 ```
 
-Optional Parameters
+<sub>[back to top](#table-of-contents)</sub>
+
+## Optional Parameters
 ```
 function greet(name?: string) {
   console.log(`Hello, ${name|| 'Anonymous'}!`);
@@ -46,6 +77,8 @@ function greet(name?: string) {
 
 greet(); // Prints: Hello, Anonymous!
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Complex Types
 
@@ -69,6 +102,8 @@ let ordersArray: [Pet, number][] = [
 ];
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Object Types
 
 ```
@@ -84,6 +119,9 @@ aPerson = {name: 'Kushim', yearsOld: 5000};
 aPerson = {name: 'User McCodecad', age: 22}; 
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
+
 ## Type Aliases
 Instead of writing long complex type of objects every time, use alias for it.
 
@@ -96,6 +134,8 @@ type Coord = [number, number, string, number, number, string]
 let codecademyCoordinates: Coord = [40, 43.2, 'N', 73, 59.8, 'W'];
 let bermudaTCoordinates: Coord = [25, 0 , 'N' , 71, 0, 'W'];
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
 
 
 ## Function Types
@@ -110,6 +150,8 @@ myFunc = function(firstName: string, lastName: string) {
 ```
 There’s something important to remember here. We must never be tempted to omit the parameter names or the parentheses around the parameters in a function type annotation, even if there is only one parameter. This code will not run!
 
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Generic Types
 TypeScript’s generics are ways to create collections of types (and typed functions, and more) that share certain formal similarities. These collections are parameterized by one or more type variables.
@@ -130,6 +172,8 @@ let aStringFamily: Family<string> = {
   children: ['stringy', 'stringo', 'stringina', 'stringolio']
 }; 
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Generic Functions
 
@@ -156,9 +200,14 @@ personArray = getFilledArray<Person>({name:'J. Dean',age: 24}, 6);
 coordinateArray = getFilledArray<Coord>([3,4], 6);
 ```
 
+<sub>[back to top](#table-of-contents)</sub>
+
 ## Unions
 
 `string or number = string | number`
+
+<sub>[back to top](#table-of-contents)</sub>
+
 
 ## Type Narrowing
 Type narrowing is when TypeScript can figure out what type a variable can be at a given point in our code.
@@ -175,6 +224,33 @@ function formatValue(value: string | number) {
 formatValue('Hiya');
 formatValue(42);
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
+
+## Using `in` with Type Guards
+The in operator checks if a property exists on an object itself or anywhere within its prototype chain.
+
+```
+type Tennis = {
+  serve: () => void;
+}
+
+type Soccer = {
+  kick: () => void;
+}
+
+function play(sport: Tennis | Soccer) {
+  if ('serve' in sport) {
+    return sport.serve();
+  }
+
+  if ('kick' in sport) {
+    return sport.kick();
+  }
+}
+```
+
+<sub>[back to top](#table-of-contents)</sub>
 
 ## Unions with Literal Types
 ```
@@ -193,3 +269,65 @@ downloadStatus('idle')
 //Throw error because argument is not and type `Status`
 downloadStatus('Stop')
 ```
+
+<sub>[back to top](#table-of-contents)</sub>
+
+## Using `interface` keyword to define a type.
+```
+// Write an interface here
+interface Run{
+  miles: number;
+}
+
+function updateRunGoal(run: Run) {
+  console.log(`
+Miles left:       ${50 - run.miles}
+Percent of goal:  ${(run.miles / 50) * 100}% complete
+  `)
+}
+
+updateRunGoal({
+  miles: 5,
+})
+```
+
+
+<sub>[back to top](#table-of-contents)</sub>
+
+## Interfaces and Classes
+
+TypeScript gives us the ability to apply a type to an object/class with the implements keyword, like this:
+```
+interface Robot {
+  identify: (id: number) => void;
+}
+
+class OneSeries implements Robot {
+  identify(id: number) {
+    console.log(`beep! I'm ${id.toFixed(2)}.`);
+  }
+
+  answerQuestion() {
+    console.log('42!');
+  }
+}
+
+```
+
+
+<sub>[back to top](#table-of-contents)</sub>
+
+## Extending Interfaces
+```
+interface Shape {
+  color: string;
+}
+
+interface Square extends Shape {
+  sideLength: number;
+}
+
+const mySquare: Square = { sideLength: 10, color: 'blue' };
+```
+
+<sub>[back to top](#table-of-contents)</sub>
