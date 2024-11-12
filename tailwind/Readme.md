@@ -234,10 +234,6 @@ example:
 </div>
 ```
 
-
-
-
-
 ## Sizing
 
 ### Width
@@ -280,11 +276,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum prae
 </div>
 ```
 
-## 100% of container
+### 100% of container
 ```
 <div class="bg-green-500 my-2 w-full">(width 100%) w-full</div>
 ```
-## Arbitrary Width
+### Arbitrary Width
 ```
 <div class="bg-teal-500 text-white my-2 w-[500px]">
 Arbitrary Width (500px)
@@ -303,7 +299,7 @@ Arbitrary Width (500px)
 </div>
 ```
 
-## Min Height
+### Min Height
 ```
 <div class="p-5 h-[400px] bg-green-300 mb-5">
   <div class="min-h-full bg-teal-400">Take Full Height</div>
