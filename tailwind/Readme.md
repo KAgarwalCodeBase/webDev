@@ -233,3 +233,93 @@ example:
   <p class="capitalize">Tailwind is awesome</p>
 </div>
 ```
+
+
+
+
+
+## Sizing
+
+### Width
+```
+<h1>Width All Around</h1>
+<div class="bg-teal-100 p-5">
+<div class="bg-teal-600 w-0">0</div>
+<div class="bg-teal-600 w-1">1</div>
+<div class="bg-teal-600 w-1.5">1.5</div>
+```
+
+### Percentage
+```
+<h1 class="mt-5">Percentages</h1>
+<div class="bg-teal-200 mb-5 p-5">
+<div class="bg-green-400 p-2 mb-4 w-1/2">1/2</div>
+<div class="bg-green-400 p-2 mb-4 w-1/3">1/3</div>
+<div class="bg-green-400 p-2 mb-4 w-2/3">2/3</div>
+<div class="bg-green-400 p-2 mb-4 w-1/4">1/4</div>
+<div class="bg-green-400 p-2 mb-4 w-2/4">2/4</div>
+<div class="bg-green-400 p-2 mb-4 w-3/4">3/4</div>
+<div class="bg-green-400 p-2 mb-4 w-1/5">1/5</div>
+</div>
+
+```
+
+### Max Width
+```
+<h1 class="mt-5">Max Width</h1>
+<div class="bg-yellow-100 p-10 mb-10 max-w-lg">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum praesentium suscipit? Eius id natus veniam dolorem repudiandae vitae cumque ex cupiditate explicabo praesentium omnis, eligendi soluta provident quos facere!
+</div>
+
+```
+### Width of the viewport
+```
+<h1 class="mt-5">VW & Width100%</h1>
+<div class="bg-green-500 my-2 p-5 w-full">
+(vw) screen
+</div>
+```
+
+## 100% of container
+```
+<div class="bg-green-500 my-2 w-full">(width 100%) w-full</div>
+```
+## Arbitrary Width
+```
+<div class="bg-teal-500 text-white my-2 w-[500px]">
+Arbitrary Width (500px)
+</div>
+```
+### Height (Most of the same options as widths)
+```
+<h1 class="mt-5">Height All Around</h1>
+<div class="flex items-end mt-20 mb-10">
+<div class="bg-indigo-400 ml-5 h-24">height 24</div>
+<div class="bg-indigo-400 ml-5 h-32">height 32</div>
+<div class="bg-indigo-400 ml-5 h-40">height 40</div>
+<div class="bg-indigo-400 ml-5 h-48">height 48</div>
+<div class="bg-indigo-400 ml-5 h-64">height 64</div>
+<div class="bg-indigo-400 ml-5 h-80">height 80</div>
+</div>
+```
+
+## Min Height
+```
+<div class="p-5 h-[400px] bg-green-300 mb-5">
+  <div class="min-h-full bg-teal-400">Take Full Height</div>
+</div>
+<!-- Max Height -->
+<!-- https://tailwindcss.com/docs/max-height -->
+<div class="h-[150px] bg-orange-200 mb-10">
+  <div class="m-20 bg-orange-500 h-48 max-h-full">Max Height Full</div>
+</div>
+```
+
+### Full screen height
+```
+<h1 class="mb-2">Full Screen Height</h1>
+<div class="bg-pink-300 mb-4 h-screen">Hello</div>
+
+<!-- Width Auto -->
+<div class="bg-green-400 p-5 w-auto">Auto</div>
+```
