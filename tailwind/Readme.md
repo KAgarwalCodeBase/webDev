@@ -122,3 +122,114 @@ example:
 <div class="p-3 bg-teal-500">02</div>
 <div class="p-3 bg-teal-600">03</div>
 ```
+
+## Typography
+
+### Font Size
+```
+<h1>1. Font Sizes</h1>
+<div class="container bg-teal-100 p-7 mb-10">
+  <p class="text-xs">Tailwind is awesome</p>
+  <p class="text-sm">Tailwind is awesome</p>
+  <p class="text-base">Tailwind is awesome</p>
+  <p class="text-lg">Tailwind is awesome</p>
+  <p class="text-xl">Tailwind is awesome</p>
+  <p class="text-2xl">Tailwind is awesome</p>
+  <p class="text-3xl">Tailwind is awesome</p>
+  <p class="text-4xl">Tailwind is awesome</p>
+  <p class="text-5xl">Tailwind is awesome</p>
+  <p class="text-6xl">Tailwind is awesome</p>
+  <p class="text-7xl">Tailwind is awesome</p>
+  <p class="text-8xl">Tailwind is awesome</p>
+  <p class="text-9xl">Tailwind is awesome</p>
+</div>
+```
+
+### Font Family
+```
+<h1>2. Font Family</h1>
+<div class="container bg-indigo-200 p-10 mb-10">
+  <p class="font-sans">Tailwind is awesome</p>
+  <p class="font-serif">Tailwind is awesome</p>
+  <p class="font-mono">Tailwind is awesome</p>
+</div>
+```
+
+### Font Weight
+```
+<h1>3. Font Weight</h1>
+<div class="container bg-orange-300 p-10 mb-10">
+  <p class="font-light">Tailwind is awesome</p>
+  <p class="font-normal">Tailwind is awesome</p>
+  <p class="font-medium">Tailwind is awesome</p>
+  <p class="font-semibold">Tailwind is awesome</p>
+  <p class="font-bold">Tailwind is awesome</p>
+</div>
+
+```
+
+### Letter Spacing
+```
+<h1>4. Letter Spacing</h1>
+<div class="container bg-red-400 p-10 mb-10">
+  <p class="tracking-tight">Tailwind is awesome</p>
+  <p class="tracking-normal">Tailwind is awesome</p>
+  <p class="tracking-wide">Tailwind is awesome</p>
+</div>
+```
+
+### Text Alignment
+```
+<h1>5. Text Alighnment</h1>
+<div class="container bg-amber-400 p-10 mb-10">
+  <p class="text-left">Tailwind is awesome</p>
+  <p class="text-center">Tailwind is awesome</p>
+  <p class="text-right">Tailwind is awesome</p>
+</div>
+
+```
+
+### Text Decoration
+```
+<h1>6. Text Decoration</h1>
+<div class="container bg-emerald-400 p-10 mb-10">
+  <p class="underline decoration-4">Tailwind is awesome</p>
+  <p class="line-through">Tailwind is awesome</p>
+  <p class="overline">Tailwind is awesome</p>
+  <p class="no-underline">Tailwind is awesome</p>
+</div>
+```
+
+### Decoration Style
+```
+<h1>7. Decoration Style</h1>
+<div class="container bg-cyan-400 p-10 mb-10">
+  <p class="underline decoration-solid">Tailwind is awesome</p>
+  <p class="underline decoration-double">Tailwind is awesome</p>
+  <p class="underline decoration-dotted">Tailwind is awesome</p>
+  <p class="underline decoration-dashed">Tailwind is awesome</p>
+  <p class="underline decoration-wavy">Tailwind is awesome</p>
+</div>
+```
+
+### Decoration offset
+```
+<h1>8. Decoration Offset</h1>
+<div class="container bg-indigo-400 p-10 mb-10">
+  <p class="underline underline-offset-1">Tailwind is awesome</p>
+  <p class="underline underline-offset-2">Tailwind is awesome</p>
+  <p class="underline underline-offset-4">Tailwind is awesome</p>
+  <p class="underline underline-offset-8">Tailwind is awesome</p>
+</div>
+
+```
+### Text Transform
+```
+<h1>9. Text Transform</h1>
+<div class="container bg-pink-400 p-10 mb-10">
+  <p class="normal-case">Tailwind is awesome</p>
+  <p class="uppercase">Tailwind is awesome</p>
+  <p class="lowercase">Tailwind is awesome</p>
+  <p class="capitalize">Tailwind is awesome</p>
+</div>
+```
