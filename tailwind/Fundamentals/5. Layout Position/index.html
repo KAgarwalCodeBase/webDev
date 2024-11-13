@@ -9,6 +9,54 @@
   </head>
   <body class="p-20">
     <!-- https://tailwindcss.com/docs/position -->
+     <h1 class="mb-3">Position</h1>
+    <div class="flex flex-wrap ">
+     <div class="relative w-1/2 h-40 bg-green-200 m-4">
+      <p>Relative</p>
+      <div class="absolute bottom-0 right-0 bg-teal-500 p-4">
+        <p>Absolute</p>
+      </div>
+     </div>
+
+     <div class="relative w-1/2 h-40 bg-green-200 m-4">
+      <p>Relative</p>
+      <div class="absolute bottom-0 left-0 bg-teal-500 p-4">
+        <p>Absolute</p>
+      </div>
+     </div>
+
+     <div class="relative w-1/2 h-40 bg-green-200 m-4">
+      <p>Relative</p>
+      <div class="absolute right-0 top-0 bg-teal-500 p-4">
+        <p>Absolute</p>
+      </div>
+     </div>
+
+     <div class="relative w-1/2 h-40 bg-green-200 m-4">
+      <p>Relative</p>
+      <div class="absolute left-0 top-0 bg-teal-500 p-4">
+        <p>Absolute</p>
+      </div>
+     </div>
+    </div>
+     
+
+
     <!-- https://tailwindcss.com/docs/display -->
+     <h1 class="mb-3">Display</h1>
+     <div class="bg-indigo-100 p-10 mb-10 w-[600px]">
+      <span class="inline">
+        This is display inline and will wrap normally.
+      </span>
+      <span>(this gebrish will added as an inline text)</span>
+      <span class="inline-block">
+        This is display inline-block and will not extend beyond it's parent
+      </span> <span class="block">
+        This is display block and will move to it's own.
+      </span>
+      <span class="hidden">
+        This is display none and will not display at all.
+      </span>
+    </div>
   </body>
 </html>

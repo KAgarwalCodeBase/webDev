@@ -1,5 +1,42 @@
 # [Tailwind CSS](https://tailwindcss.com/)
 
+## Table of Contents
+- [Text Color](#text-color)
+  - [Hover, focus and other states](#hover-focus-and-other-states)
+  - [Breakpoints and media queries](#breakpoints-and-media-queries)
+  - [Arbitrary Values](#arbitrary-values)
+  - [Background Colors](#background-colors)
+  - [Text Decoration](#text-decoration)
+  - [Accent Colors](#accent-colors)
+- [Container Spacing](#container-spacing)
+  - [Margin](#margin)
+  - [arbitrary Spacing](#arbitrary-spacing)
+  - [Padding](#padding)
+  - [Space Between X](#space-between-x)
+  - [Space Between Y](#space-between-y)
+- [Typography](#typography)
+  - [Font Size](#font-size)
+  - [Font Family](#font-family)
+  - [Font Weight](#font-weight) 
+  - [Letter Spacing](#letter-spacing)
+  - [Text Alignment](#text-alignment)
+  - [Text Decoration](#text-decoration)
+  - [Decoration Style](#decoration-style)
+  - [Decoration Offset](#decoration-offset)
+  - [Text Transfor](#text-transform)
+- [Sizing](#sizing)
+  - [Width](#width)
+  - [Percentage](#percentage)
+  - [Max Width](#max-width)
+  - [Width of the viewport](#width-of-the-viewport)
+  - [100% of container](#100-of-container)
+  - [Arbitrary Width](#arbitrary-width)
+  - [Height ](#height-most-of-the-same-options-as-widths)
+  - [Min Height](#min-height)
+  - [Full Screen Height](#full-screen-height)
+  - [Width Auto](#width-auto)
+
+
 ## [Text color](https://tailwindcss.com/docs/customizing-colors)
 
 Use the text-* utilities to control the text color of an element.  
@@ -8,7 +45,7 @@ Example: `<p class="text-blue-600">The quick brown fox...</p>`
 
 Values are from [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
-### Hover, focus, and other states
+### Hover, focus and other states
 
 Example: `<p class="text-slate-500 hover:text-blue-600">The quick brown fox...</p>`
 
@@ -41,25 +78,6 @@ Example: `<p class="text-slate-500 hover:text-blue-600">The quick brown fox...</
     <p class="text-white bg-zinc-500">Tailwind</p>
     <p class="text-white bg-amber-300">Tailwind</p>
     <p class="text-white bg-pink-700">Tailwind</p>
-
-
-### [Text Decoration](https://tailwindcss.com/docs/text-decoration )
-
-`overline`  
-`underline`  
-`no-underline`  
-`none`  
-`line-through`
-
-example:
-```
-<p class="line-through">Tailwind</p>
-<p class="underline">Tailwind</p>
-<p class="overline">Tailwind</p>
-<p class="underline decoration-blue-400">Tailwind</p>
-<p class="text-purple-600 underline decoration-purple-600 bg-purple-200">Tailwind</p>
-
-```
 
 ### [Accent Colors](https://tailwindcss.com/docs/accent-color)
 
@@ -189,17 +207,23 @@ example:
 
 ```
 
-### Text Decoration
-```
-<h1>6. Text Decoration</h1>
-<div class="container bg-emerald-400 p-10 mb-10">
-  <p class="underline decoration-4">Tailwind is awesome</p>
-  <p class="line-through">Tailwind is awesome</p>
-  <p class="overline">Tailwind is awesome</p>
-  <p class="no-underline">Tailwind is awesome</p>
-</div>
-```
+### [Text Decoration](https://tailwindcss.com/docs/text-decoration )
 
+`overline`  
+`underline`  
+`no-underline`  
+`none`  
+`line-through`
+
+example:
+```
+<p class="line-through">Tailwind</p>
+<p class="underline">Tailwind</p>
+<p class="overline">Tailwind</p>
+<p class="underline decoration-blue-400">Tailwind</p>
+<p class="text-purple-600 underline decoration-purple-600 bg-purple-200">Tailwind</p>
+
+```
 ### Decoration Style
 ```
 <h1>7. Decoration Style</h1>
@@ -315,7 +339,45 @@ Arbitrary Width (500px)
 ```
 <h1 class="mb-2">Full Screen Height</h1>
 <div class="bg-pink-300 mb-4 h-screen">Hello</div>
+```
 
-<!-- Width Auto -->
+### Width Auto
+```
 <div class="bg-green-400 p-5 w-auto">Auto</div>
+```
+
+## Layout Position
+
+`Position relative and absolute`
+```
+<div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+    <p>Relative</p>
+    <div class="absolute bottom-0 h-16 w-16 bg-teal-500">
+      <p>Absolute</p>
+    </div>
+</div>
+```
+
+`Css layout property display inline, inline-block, block or hidden`
+
+```
+<h1 class="mb-3">Display</h1>
+<div class="bg-indigo-100 p-10 mb-10 w-[600px]">
+<span class="inline">
+  1. This is display inline and will wrap normally
+</span>
+
+<span class="inline-block">
+  2. This is display inline-block and will not extend beyond it's
+  parent
+</span>
+
+<span class="block">
+  3. This is display block and will move to it's own line
+</span>
+
+<span class="hidden">
+  This is display none and will not display at all
+</span>
+</div>
 ```
