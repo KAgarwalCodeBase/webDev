@@ -651,3 +651,17 @@ setTimeout(() => {
 In this example, "Hello!" will be logged every 2 seconds, and after 10 seconds, `clearInterval()` stops the recurring action.
 
 <sub>[back to top](#table-of-contents)</sub>
+
+## Array Sorting | Difference Between `nums.sort()` and `nums.sort((a,b)=>a-b)`
+
+The difference between nums.sort() and nums.sort((a, b) => a - b); lies in how JavaScript's default sort() function handles the comparison of array elements. Here’s a breakdown:
+
+### nums.sort() (Default Sort):
+JavaScript's default sort() sorts elements as strings.
+This means it uses `lexicographical (dictionary-like) order,` even if the array contains numbers.
+For example, [1, 2, 10, 5] sorted with nums.sort() would become [1, 10, 2, 5], because it compares "10" as a string, placing it before "2".
+
+### nums.sort((a, b) => a - b); (Numeric Sort):
+Using nums.sort((a, b) => a - b); provides a comparison function that `sorts the elements as numbers`.
+Here, (a - b) returns a negative value if a is less than b, a positive value if a is greater than b, and 0 if they are equal.
+This numeric comparison function ensures that the array [1, 2, 10, 5] correctly sorts to [1, 2, 5, 10].
