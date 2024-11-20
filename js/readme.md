@@ -665,3 +665,37 @@ For example, [1, 2, 10, 5] sorted with nums.sort() would become [1, 10, 2, 5], b
 Using nums.sort((a, b) => a - b); provides a comparison function that `sorts the elements as numbers`.
 Here, (a - b) returns a negative value if a is less than b, a positive value if a is greater than b, and 0 if they are equal.
 This numeric comparison function ensures that the array [1, 2, 10, 5] correctly sorts to [1, 2, 5, 10].
+
+
+## Reduce in JS
+Finding common elements in two array.
+
+```
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+
+var intersect = function(nums1, nums2) {
+    const countMap = nums1.reduce(
+        (map, num)=>{
+            map.set(num, (map.get(num)||0)+1)
+            return map;
+        },
+        new Map()
+    );
+    
+    return nums2.reduce((res, num)=>{
+        if (countMap.get(num)){
+            res.push(num);
+            countMap.set(num, countMap.get(num)-1);
+        }
+        return res;
+    }, []);
+    };
+```
+
+## Array(frequency).fill(ele)
+This function is used for creating array of length `frequency` having every element equal to `ele`
+
+i.e `Array(3).fill(2)==[2, 2, 2]`
